@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/frameLayout">
+	<FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:background="@color/green" >
+
+            <View
+                android:id="@+id/header_vertical_divider_1"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/menuViewButton" />
+
+            <ImageView
+                android:id="@+id/menuViewButton"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/left_menu"
+                android:visibility="visible" 
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+			<View
+                android:id="@+id/header_vertical_divider_2"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton" />
+			<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_search"
+                    android:layout_centerInParent="true"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"/>
+        	
+        </RelativeLayout>
+		<ScrollView 
+		        android:id="@id/scrollView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" >
+	       <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/header"
+	            android:focusableInTouchMode="true"
+	            android:id="@+id/wrapper"
+	            android:background="@drawable/search_background">
+		       <RelativeLayout
+			            android:id="@+id/rlPanelStoreName"
+			            android:layout_width="300dp"
+			            android:layout_height="35dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "30dp"
+			            android:background="@drawable/backgroundbuttonwhite"
+			            android:layout_centerHorizontal="true"
+			            android:alpha="0.5">
+			
+			            <EditText
+			                android:id="@+id/editStoreName"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:hint="@string/title_store_name"
+			                android:background="#ffffff"
+			                android:gravity="center"
+			                android:textSize="12dp"
+			                android:textColorHint="@color/black"
+			                android:textColor="@color/black" />
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlPanelCompanyName"
+			            android:layout_width="300dp"
+			            android:layout_height="35dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlPanelStoreName"
+			            android:background="@drawable/backgroundbuttonwhite"
+			            android:layout_centerHorizontal="true"
+			            android:alpha="0.5">
+			
+			            <EditText
+			                android:id="@+id/editCompanyName"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:hint="@string/title_company_name"
+			                android:background="#ffffff"
+			                android:gravity="center"
+			                android:textSize="12dp"
+			                android:textColorHint="@color/black"
+			                android:textColor="@color/black" />
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlCategory"
+			            android:layout_width="300dp"
+			            android:layout_height="35dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlPanelCompanyName"
+			            android:background="@drawable/backgroundbuttonwhite"
+			            android:layout_centerHorizontal="true"
+			            android:alpha="0.5">
+			
+			            <EditText
+			                android:id="@+id/editCategoryName"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:hint="@string/title_category_name"
+			                android:background="#ffffff"
+			                android:gravity="center"
+			                android:textSize="12dp"
+			                android:focusable="false"
+			                android:textColorHint="@color/black"
+			                android:textColor="@color/black" />
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlCity"
+			            android:layout_width="300dp"
+			            android:layout_height="35dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlCategory"
+			            android:background="@drawable/backgroundbuttonwhite"
+			            android:layout_centerHorizontal="true"
+			            android:alpha="0.5">
+			
+			            <EditText
+			                android:id="@+id/editCityName"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:hint="@string/title_city_name"
+			                android:background="#ffffff"
+			                android:gravity="center"
+			                android:textSize="12dp"
+			                android:focusable="false"
+			                android:textColorHint="@color/black"
+			                android:textColor="@color/black" />
+				</RelativeLayout>
+				<RelativeLayout 
+				    	android:id="@+id/rlSeekSlider"
+			       		android:layout_width="300dp"
+			            android:layout_height="wrap_content"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlCity"
+			            android:layout_centerHorizontal="true" >
+				    
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlSeekTime"
+			            android:layout_width="300dp"
+			            android:layout_height="25dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlSeekSlider"
+			            android:layout_centerHorizontal="true">
+						<RelativeLayout
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_centerInParent="true">
+							<TextView
+							    android:id="@+id/txt_waiting"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:text="@string/txt_waitingTime"
+							    android:textColor="@color/black"
+							    android:textSize="12dp" />
+				            <TextView
+							    android:id="@+id/txtFirstRange"
+							    android:layout_width="20dp"
+							    android:layout_height="wrap_content"
+							    android:text="0"
+							    android:gravity="center"
+							    android:textColor="@color/black"
+								android:textSize="12dp"
+								android:layout_marginLeft="10dp"
+								android:layout_toRightOf="@+id/txt_waiting"
+							    android:layout_centerHorizontal="true"/>
+				            <TextView
+							    android:id="@+id/txt_semiColon"
+							    android:layout_width="10dp"
+							    android:layout_height="wrap_content"
+							    android:text="@string/txt_semicolon"
+							    android:textColor="@color/black"
+							    android:gravity="center"
+								android:textSize="12dp"
+								android:layout_toRightOf="@+id/txtFirstRange"
+							    android:layout_centerHorizontal="true"/>
+				            <TextView
+							    android:id="@+id/txtSecondRange"
+							    android:layout_width="20dp"
+							    android:layout_height="wrap_content"
+							    android:text="60"
+							    android:textColor="@color/black"
+								android:textSize="12dp"
+								android:layout_toRightOf="@+id/txt_semiColon"
+							    android:layout_centerHorizontal="true"/>
+				            <TextView
+							    android:id="@+id/txtMin"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:text="@string/txt_min"
+							    android:textColor="@color/black"
+								android:textSize="12dp"
+								android:gravity="left"
+								android:layout_marginLeft="10dp"
+								android:layout_toRightOf="@+id/txtSecondRange"
+							    android:layout_centerHorizontal="true"/>
+				       </RelativeLayout>
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlCheckTime"
+			            android:layout_width="300dp"
+			            android:layout_height="40dp"
+			            android:layout_marginLeft="10dp"
+			            android:layout_marginRight="10dp"
+			            android:layout_marginTop = "20dp"
+			            android:layout_below="@+id/rlSeekTime"
+			            android:layout_centerHorizontal="true">
+						<RelativeLayout
+						    android:layout_width="wrap_content"
+						    android:layout_height="fill_parent"
+						    android:layout_centerInParent="true">
+				              <CheckBox
+						        android:id="@+id/chkTime"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:focusable="true"
+						        android:clickable="true" 
+						        android:onClick="itemClicked" />
+				               <TextView
+							    android:id="@+id/txtWaitingAll"
+							    android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:text="@string/txt_wating_all"
+							    android:textColor="@color/black"
+								android:textSize="12dp"
+								android:gravity="left"
+								android:layout_marginLeft="10dp"
+								android:layout_toRightOf="@+id/chkTime"
+							    android:layout_centerHorizontal="true"
+							    android:layout_centerVertical="true"/>
+						</RelativeLayout>
+				</RelativeLayout>
+				<RelativeLayout
+			            android:id="@+id/rlSearch"
+			            android:layout_width="wrap_content"
+			            android:layout_height="30dp"
+			            android:layout_below="@+id/rlCheckTime"
+			            android:layout_centerInParent="true"
+			            android:layout_marginTop="40dp"
+			            android:clickable="true">
+						<Button
+					             android:id="@+id/btnSearch"
+					             android:layout_width="100dp"
+					             android:layout_height="40dp"
+					             android:layout_centerVertical="true"
+					             android:text="@string/title_search" 
+					             android:layout_centerInParent="true"
+					             android:textColor="@color/white" 
+					             android:clickable="false"
+					             android:focusable="false"
+					             android:background="@color/darkGreen"/>
+			     </RelativeLayout>
+			</RelativeLayout>
+		 </ScrollView>
+    </LinearLayout>  
+     
+</FrameLayout>

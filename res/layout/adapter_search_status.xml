@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#FFFFFF">
+    <RelativeLayout android:id="@+id/rl_top_1"
+        android:layout_width="fill_parent"
+        android:layout_height="78dp"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp">
+        <TextView
+		   	android:id="@+id/txtStoreName"
+		   	android:layout_width="wrap_content"
+		   	android:layout_height="wrap_content"
+		   	android:textColor="#000000"
+		   	android:textSize="12dp"
+		   	android:text="Store"
+		   	android:gravity="center" />
+
+	   	<TextView
+	   	    android:id="@+id/txt_estimated_waiting"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_below="@+id/txtStoreName"
+	   	    android:gravity="left"
+	   	    android:textColor="@color/black"
+	   	    android:text="@string/titleEstimatedWaiting"
+	   	    android:textSize="10dp" 
+	   	    android:layout_marginTop="5dp"/>
+	   	<TextView
+	   	    android:id="@+id/txt_current"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_below="@+id/txt_estimated_waiting"
+	   	    android:gravity="center"
+	   	    android:text="@string/txt_currentString"
+	   	    android:textColor="@color/black"
+	   	    android:textSize="10dp"
+	   	    android:layout_centerVertical="true"
+	   	    android:layout_marginTop="5dp" />
+	     <TextView
+	        android:id="@+id/txtLast"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+	   	    android:layout_below="@+id/txt_estimated_waiting"
+	   	    android:text="@string/txt_my_waiting"
+	   	    android:layout_toRightOf="@+id/txt_current"
+	   	    android:gravity="center"
+	   	    android:textColor="@color/black"
+	   	    android:textSize="10dp"
+	   	    android:layout_marginLeft="120dp"
+	   	    android:layout_centerVertical="true" 
+	   	    android:layout_marginTop="5dp"/>
+
+	       <TextView
+	           android:id="@+id/txtEstimatedWaitingAmount"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_alignBaseline="@+id/txt_estimated_waiting"
+	           android:layout_alignBottom="@+id/txt_estimated_waiting"
+	           android:layout_toRightOf="@+id/txt_estimated_waiting"
+	           android:layout_marginLeft="5dp"
+	           android:text="___"
+	           android:textColor="@color/black"
+	           android:textSize="12dp" />
+
+	       <TextView
+	           android:id="@+id/txtCurrentAmount"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_alignTop="@+id/txt_current"
+	           android:layout_toRightOf="@+id/txt_current"
+	           android:gravity="center"
+	           android:text=""
+	           android:layout_marginLeft="5dp"
+	           android:textColor="@color/black"
+	           android:textSize="12dp" />
+
+	       <TextView
+	           android:id="@+id/txtQueue"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_alignBaseline="@+id/txtLast"
+	           android:layout_alignBottom="@+id/txtLast"
+	           android:layout_toRightOf="@+id/txtLast"
+	           android:gravity="center"
+	           android:text=""
+	           android:layout_marginLeft="5dp"
+	           android:textColor="@color/black"
+	           android:textSize="12dp" />
+	    
+	</RelativeLayout>
+</LinearLayout>

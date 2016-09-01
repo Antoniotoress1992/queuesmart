@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/frameLayout">
+	<FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:background="@color/green" >
+
+            <View
+                android:id="@+id/header_vertical_divider_1"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/menuViewButton" />
+
+            <ImageView
+                android:id="@+id/menuViewButton"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/back_button"
+                android:visibility="visible" 
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+			<View
+                android:id="@+id/header_vertical_divider_2"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton" />
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="18dp"
+                android:text="@string/title_detail"
+                android:textColor="#ffffff"/>
+        	<ImageView
+                android:id="@+id/menuGoToNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:contentDescription="@string/description"
+                android:src="@drawable/next_button" />
+        </RelativeLayout>
+
+       <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:background="@drawable/search_background">
+	       	<RelativeLayout 
+			    android:id="@+id/rlSearchResult"
+		       	android:layout_width="300dp"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		        android:layout_marginTop = "40dp"
+		        android:layout_centerHorizontal="true" >
+			    <RelativeLayout
+				    android:id="@+id/layout_store_name"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true">
+					<TextView
+						android:id="@+id/txtStoreName"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_store_name" 
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+						android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txtStoreName"
+						android:id="@+id/txtStoreNameDetail"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+				</RelativeLayout>
+				<RelativeLayout
+				    android:id="@+id/layout_company_name"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_store_name">
+					<TextView
+						android:id="@+id/txtCompanyName"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/txt_company_name" 
+						
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+					    android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txtCompanyName"
+						android:id="@+id/txtCompanyNameDetail"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_waiting_time"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_company_name">
+					<TextView
+						android:id="@+id/txt_waiting_time"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_waiting_name" 
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+					    android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txt_waiting_time"
+						android:id="@+id/txtWaitingTime"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_next_number"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_waiting_time">
+					<TextView
+						android:id="@+id/txt_next_number"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_next_number" 
+						
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+					    android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txt_next_number"
+						android:id="@+id/txtNextNumber"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_category"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_next_number">
+					<TextView
+						android:id="@+id/txt_category_name"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_category" 
+						
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+					    android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txt_category_name"
+						android:id="@+id/txtCategoryName"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_city"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_category">
+					<TextView
+						android:id="@+id/txt_city_name"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_city" 
+						
+						android:gravity="right"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+					<TextView
+					    android:layout_width="180dp"
+						android:gravity="center"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/txt_city_name"
+						android:id="@+id/txtCityName"
+						android:textColor="@color/black"
+						android:layout_marginLeft="20dp"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_store_detail"
+				    android:layout_width="fill_parent"
+				    android:layout_height="40dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_city">
+					<TextView
+						android:id="@+id/txt_store_detail"
+						android:layout_width="100dp"
+						android:layout_height="wrap_content"
+						android:text="@string/title_store_detail" 
+						android:layout_centerVertical="true"
+						android:gravity="left"
+						android:textSize="12dp"
+						android:textColor="@color/darkGrey"/>
+						<Button
+					       android:id="@+id/btnApply"
+					       android:layout_width="80dp"
+					       android:layout_height="30dp"
+					       android:textColor = "@color/white"
+						   android:background="@color/green" 
+					       android:text="@string/txt_apply" 
+					       android:layout_centerVertical="true"
+					       android:layout_alignParentRight="true"/>
+						<TextView
+						   android:id="@+id/txtQueue"
+					       android:layout_width="80dp"
+					       android:layout_height="30dp"
+					       android:textColor = "@color/darkGrey"
+					       android:gravity="center"
+						   android:layout_centerVertical="true"
+					       android:layout_alignParentRight="true"/>
+					
+			    </RelativeLayout>
+			    <RelativeLayout
+				    android:id="@+id/layout_web_view"
+				    android:layout_width="fill_parent"
+				    android:layout_height="200dp" 
+				    android:layout_centerHorizontal="true"
+				    android:layout_below="@+id/layout_store_detail">
+					<WebView 
+					    android:id="@+id/webview"
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"/>
+				</RelativeLayout>
+			  </RelativeLayout>
+			   
+		</RelativeLayout>
+    </LinearLayout>  
+     
+</FrameLayout>

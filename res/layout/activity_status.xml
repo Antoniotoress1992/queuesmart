@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/frameLayout">
+	<FrameLayout
+        android:id="@+id/menuPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/slidingPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:background="@color/green" >
+
+            <View
+                android:id="@+id/header_vertical_divider_1"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/menuViewButton" />
+
+            <ImageView
+                android:id="@+id/menuViewButton"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:contentDescription="@string/description"
+                android:src="@drawable/left_menu"
+                android:visibility="visible" 
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+			<View
+                android:id="@+id/header_vertical_divider_2"
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/menuRightButton" />
+			<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_status"
+                    android:layout_centerInParent="true"
+                    android:textSize="18dp"
+                    android:textColor="#ffffff"/>
+    
+        </RelativeLayout>
+
+       <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header"
+            android:background="@drawable/search_background">
+	       	<RelativeLayout 
+			    	android:id="@+id/rlSearchResult"
+		       		android:layout_width="300dp"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop = "20dp"
+		            android:layout_centerHorizontal="true" >
+		             <TextView 
+		               android:id="@+id/txtSearchNo"
+		               android:layout_width="fill_parent"
+		               android:layout_height="78dp"
+		               android:background="@color/white"
+		               android:textSize="14dp"
+		               android:textColor="@color/black"
+		               android:gravity="center"
+		               android:text="@string/txtSearchNo"
+		               android:visibility="gone"/>
+		           
+			    	 <ListView
+				       android:id="@+id/lstSearchStatus"
+				       android:layout_width="wrap_content"
+				       android:layout_height="wrap_content"
+				       android:layout_below="@+id/txtSearchNo"
+				       android:clickable="true"
+				       android:layout_marginTop="10dp"
+				       android:layout_marginBottom="10dp"
+				       android:divider="#DDD"
+					   android:dividerHeight="2px"/>
+			</RelativeLayout>
+		</RelativeLayout>
+    </LinearLayout>  
+     
+</FrameLayout>
